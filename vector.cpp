@@ -1,20 +1,45 @@
-//count the number of occurances of an element x
+//basic vector functions
 #include<vector>
 #include<iostream>
 using namespace std;
-    int main(){
-        vector <int> v(6);
-        for(int i=0;i<v.size();i++){  //right running
-            cin>>v[i];
-        }
-        cout<<"value of x: ";
-        int x;
-        cin>>x;
-        int occurence=0;
-        for(int i=0; i<v.size();i++){
-            if(x==v[i]){
-                occurence++;
-            }
-        }
-      cout<<occurence<<endl;
-    }
+int main(){
+    vector<int> name;
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+    name.push_back(1);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+    name.push_back(2);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+    name.push_back(3);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+    name.push_back(8);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+    name.push_back(8);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+
+    name.resize(9);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+    name.resize(30);
+    cout<<"size: "<<name.size()<<endl;
+    cout<<"capacity: "<<name.capacity()<<endl;
+
+name.pop_back();
+name.pop_back();
+name.pop_back();
+cout<<"size: "<<name.size()<<endl;
+cout<<"capacity: "<<name.capacity()<<endl;
+
+}
